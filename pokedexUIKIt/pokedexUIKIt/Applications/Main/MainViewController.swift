@@ -11,20 +11,30 @@ class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setup()
     }
 
     func setup() {
-        let item = UITabBarItem()
-        item.title = "Pokemons"
-        item.image = UIImage(named: "pokemon")
-        item.selectedImage = UIImage(named: "pokemonActive")
+        UITabBar.appearance().tintColor = UIColor.black
+        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
+
+        let pokemonsItem = UITabBarItem()
+        pokemonsItem.title = "Pokemons"
+        pokemonsItem.image = UIImage(named: "pokemon")
+        pokemonsItem.selectedImage = UIImage(named: "pokemonActive")
 
         let pokemonVC = PokemonsFactory.makeViewController()
-        pokemonVC.tabBarItem = item
+        pokemonVC.tabBarItem = pokemonsItem
 
-        self.viewControllers = [pokemonVC]
+        let movesItem = UITabBarItem()
+        movesItem.title = "Moves"
+        movesItem.image = UIImage(named: "moves")
+        movesItem.selectedImage = UIImage(named: "movesActive")
+
+        let movesVC = MovesFactory.makeViewController()
+        movesVC.tabBarItem = movesItem
+
+        self.viewControllers = [pokemonVC, movesVC]
     }
 
 }

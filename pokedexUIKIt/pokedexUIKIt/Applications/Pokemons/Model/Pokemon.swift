@@ -20,6 +20,9 @@ enum PokemonType: String, Decodable, CaseIterable, Identifiable {
     case electric = "Electric"
     case bug = "Bug"
     case normal = "Normal"
+    case fighting = "Fighting"
+    case ice = "Ice"
+    case ground = "Ground"
 }
 
 struct Pokemon: Codable {

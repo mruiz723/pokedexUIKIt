@@ -31,7 +31,10 @@ class PokemonsViewModel: PokemonsViewModelProtocol {
     // MARK: Public Methods
 
     func viewDidLoad() {
-        fetchPokemonsList()
+        // This delay is for showing the spinner
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            self?.fetchPokemonsList()
+        }
     }
 
     func fetchPokemonsList() {
@@ -39,13 +42,13 @@ class PokemonsViewModel: PokemonsViewModelProtocol {
 
         pokemonsManager.fetchPokemonsList { result in
             DispatchQueue.main.async { [weak self] in
-                self?.shouldShowLoader?(false)
                 switch result {
                 case .success(let pokemons):
                     self?.pokemons.value = pokemons
                 case .failure(let error):
                     self?.showAlert?(error.localizedDescription)
                 }
+                self?.shouldShowLoader?(false)
             }
         }
     }

@@ -33,6 +33,18 @@ struct PokemonColor {
         case .water:
             gradient.colors = [UIColor.primaryWater, UIColor.secondaryWater]
             return gradient
+        case .fighting:
+            gradient.colors = [UIColor.primaryFighting, UIColor.secondaryFighting]
+            return gradient
+        case .ice:
+            gradient.colors = [UIColor.primaryIce, UIColor.secondaryIce]
+            return gradient
+        case .electric:
+            gradient.colors = [UIColor.primaryElectric, UIColor.secondaryElectric]
+            return gradient
+        case .ground:
+            gradient.colors = [UIColor.primaryGround, UIColor.secondaryGround]
+            return gradient
         default:
             gradient.colors = [UIColor.primaryNormal, UIColor.secondaryNormal]
             return gradient
@@ -55,4 +67,12 @@ extension UIColor {
     static let secondaryPoison = UIColor(red: 194.0/255, green: 97.0/255, blue: 212.0/255, alpha: 0.8).cgColor
     static let primaryFlying = UIColor(red: 144.0/255, green: 167.0/255, blue: 218.0/255, alpha: 0.8).cgColor
     static let secondaryFlying = UIColor(red: 166.0/255, green: 194.0/255, blue: 242.0/255, alpha: 0.8).cgColor
+    static let primaryFighting = UIColor(red: 206.0/255, green: 66.0/255, blue: 101.0/255, alpha: 0.8).cgColor
+    static let secondaryFighting  = UIColor(red: 231.0/255, green: 67.0/255, blue: 71.0/255, alpha: 0.8).cgColor
+    static let primaryIce = UIColor(red: 112.0/255, green: 204.0/255, blue: 189.0/255, alpha: 0.8).cgColor
+    static let secondaryIce  = UIColor(red: 140.0/255, green: 221.0/255, blue: 212.0/255, alpha: 0.8).cgColor
+    static let primaryElectric = UIColor(red: 237.0/255, green: 213.0/255, blue: 62.0/255, alpha: 0.8).cgColor
+    static let secondaryElectric  = UIColor(red: 251.0/255, green: 226.0/255, blue: 115.0/255, alpha: 0.8).cgColor
+    static let primaryGround = UIColor(red: 220.0/255, green: 117.0/255, blue: 69.0/255, alpha: 0.8).cgColor
+    static let secondaryGround  = UIColor(red: 210.0/255, green: 148.0/255, blue: 99.0/255, alpha: 0.8).cgColor
 }
