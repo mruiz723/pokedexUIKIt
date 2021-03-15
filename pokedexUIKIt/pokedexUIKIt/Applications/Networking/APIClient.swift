@@ -25,7 +25,7 @@ struct APIClient: API {
     /// Dispatches a Request and returns a Result
     /// - Parameter request: Request to Dispatch
     /// - Returns: A Result containing decoded data or an error
-    func dispatch<R: Request>(_ request: R, completion:@escaping (Result<R.ReturnType, NetworkRequestError>) -> Void){
+    func dispatch<R: Request>(_ request: R, completion:@escaping (Result<R.ReturnType, NetworkRequestError>) -> Void) {
         guard let urlRequest = request.asURLRequest(baseURL: baseURL) else {
             return completion(.failure(.badRequest))
         }

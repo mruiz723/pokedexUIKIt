@@ -111,4 +111,3 @@ extension MovesViewController: UISearchBarDelegate {
         viewModel.filterMoves(name: searchBar.text)
     }
 }
-

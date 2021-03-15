@@ -37,4 +37,3 @@ extension BaseViewController: AlertProtocol {
         shouldShow ? SVProgressHUD.show() : SVProgressHUD.dismiss()
     }
 }
-

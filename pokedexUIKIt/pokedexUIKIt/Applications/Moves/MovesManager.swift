@@ -53,7 +53,7 @@ struct MovesManager: MovesManagerProtocol {
 struct MovesRequest: Request {
     typealias ReturnType = PageObject
     var path: String = "/move"
-    var queryItems: [URLQueryItem]? = nil
+    var queryItems: [URLQueryItem]?
 
     init() {
         let offsetItem: URLQueryItem = URLQueryItem(name: Constants.offset, value: String(MovesManager.movesOffset))

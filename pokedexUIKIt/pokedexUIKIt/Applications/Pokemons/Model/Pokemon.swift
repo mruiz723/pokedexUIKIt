@@ -39,7 +39,7 @@ struct Pokemon: Codable {
     let name: String
     let order: Int
 //    let pastTypes: [] Pending to find a pokemon that uses this field
-    let species: NamedAPIResource 
+    let species: NamedAPIResource
     let sprites: Sprite
     let stats: [StatResource]
     let types: [TypeResource]

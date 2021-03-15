@@ -51,7 +51,6 @@ class PokemonCell: UITableViewCell {
         }
     }
 
-
     // MARK: - Public Methods
 
     override func setSelected(_ selected: Bool, animated: Bool) {

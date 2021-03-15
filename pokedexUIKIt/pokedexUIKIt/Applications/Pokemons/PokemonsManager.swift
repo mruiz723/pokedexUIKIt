@@ -53,7 +53,7 @@ struct PokemonsManager: PokemonsManagerProtocol {
 struct PokemonsRequest: Request {
     typealias ReturnType = PageObject
     var path: String = "/pokemon"
-    var queryItems: [URLQueryItem]? = nil
+    var queryItems: [URLQueryItem]?
 
     init() {
         let offsetItem: URLQueryItem = URLQueryItem(name: Constants.offset, value: String(PokemonsManager.pokemonsOffset))

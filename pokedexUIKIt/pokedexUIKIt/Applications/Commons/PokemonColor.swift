@@ -10,6 +10,7 @@ import UIKit
 
 struct PokemonColor {
 
+    // swiftlint:disable:next cyclomatic_complexity
     static func typeLinearGradient(name: String?) -> CAGradientLayer {
         let gradient = CAGradientLayer()
         gradient.locations = [0.0, 1.0]
