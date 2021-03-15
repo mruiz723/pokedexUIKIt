@@ -1,7 +1,5 @@
 # PokedexUIKit
 
-[TOC]
-
 | PokemonsList                        | MovesList                     |
 | ----------------------------------- | ----------------------------- |
 | ![PokemonsList](./PokemonsList.gif) | ![MovesList](./MovesList.gif) |
